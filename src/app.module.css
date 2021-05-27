@@ -1,0 +1,21 @@
+.app {
+    background-color: #f06292;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+}
+.deto {
+    background-color: #9575cd;
+    height: 80%;
+    width: 20%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+.list {
+    background-color: white;
+    height: 70%;
+    width: 50%;
+    margin-top: 7.5%;
+}

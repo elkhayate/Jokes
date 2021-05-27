@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import React,{useState} from 'react';
+import style from "./app.module.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [Jokes , setJokes] = useState([])
+  const getJoke = async() => {
+    var Jokes = [];
+    while (Jokes.length < 10) {
+      let res = await axios.get("https://icanhazdadjoke.com/", {headers : {Accept : "application/json"}});
+      Jokes.push({id : res.data.id, joke : res.data.joke})
+    }
+    
+    setJokes(Jokes)
+  }
+  const Joke = Jokes.map((j) => <p>{j.joke}</p>)
+  return(
+    <div className={style.app}>
+      <div className={style.deto}>
+            <button onClick={getJoke}>Get Jokes</button>
+      </div>
+      <div className={style.list}>
+          {Jokes && Joke}
+      </div>
     </div>
-  );
+  )
 }
-
 export default App;
