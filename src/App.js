@@ -1,7 +1,7 @@
 import axios from "axios";
 import React,{useState} from 'react';
 import style from "./app.module.css";
-
+import lol from "./img/lol.png"
 function App() {
   const [Jokes , setJokes] = useState([])
   const getJoke = async() => {
@@ -17,7 +17,10 @@ function App() {
   return(
     <div className={style.app}>
       <div className={style.deto}>
-            <button onClick={getJoke}>Get Jokes</button>
+          <div className={style.items}>
+            <h1 className={style.title}>Joke <span className={style.span}>Generator</span></h1>
+            <button className={style.btn} onClick={getJoke}>Get Jokes</button>
+          </div>
       </div>
       <div className={style.list}>
           {Jokes && Joke}

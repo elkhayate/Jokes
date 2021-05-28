@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sigmar+One&display=swap');
 .app {
     background-color: #f06292;
     height: 100%;
@@ -11,6 +13,7 @@
     width: 20%;
     margin-left: 15%;
     margin-top: 5%;
+    border-radius: 10px;
 }
 
 .list {
@@ -18,4 +21,39 @@
     height: 70%;
     width: 50%;
     margin-top: 7.5%;
+    border-radius: 15px;
+}
+.title {
+    font-family: 'Sigmar One', cursive;
+    font-size: 40px;
+    color: white;
+}
+
+.span {
+    font-family: 'Dancing Script', cursive;
+    font-size: larger;
+    font-weight: 700;
+    font-style: italic;
+}   
+
+.items {
+    display: flexbox;
+    text-align: center;
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    height: 100%;
+    margin-top: 70%;
+}
+.btn {
+    background-color: yellow;
+    color: #fff;
+    height: 10%;
+    width: 50%;
+    border: 0px;
+    border-radius: 19px;
+    cursor: pointer;
+    background-color: #f06292;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
 }
