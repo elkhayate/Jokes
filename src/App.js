@@ -1,9 +1,11 @@
 import axios from "axios";
 import React,{useState} from 'react';
 import style from "./app.module.css";
-import lol from "./img/lol.png"
+import Jokee from "./components/Joke";
+
 function App() {
   const [Jokes , setJokes] = useState([])
+  const [show, setShow] = useState(false)
   const getJoke = async() => {
     var Jokes = [];
     while (Jokes.length < 10) {
@@ -12,20 +14,24 @@ function App() {
     }
     
     setJokes(Jokes)
+    setShow(true)
   }
-  const Joke = Jokes.map((j) => <p>{j.joke}</p>)
+  const Joke = Jokes.map((j) => <Jokee joke={j.joke}/>)
   return(
     <div className={style.app}>
+    
       <div className={style.deto}>
           <div className={style.items}>
             <h1 className={style.title}>Joke <span className={style.span}>Generator</span></h1>
             <button className={style.btn} onClick={getJoke}>Get Jokes</button>
           </div>
       </div>
+
       <div className={style.list}>
-          {Jokes && Joke}
+          {show ? Jokes && Joke : (<h1 className={style.wait}>Click the button to get some weird Jokes :)</h1>)}
       </div>
     </div>
   )
 }
 export default App;
+

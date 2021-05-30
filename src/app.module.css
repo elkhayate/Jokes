@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
 .app {
-    background-color: #f06292;
+    background-image: url("./img/back.jpg");
     height: 100%;
     position: absolute;
     width: 100%;
     display: flex;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 .deto {
-    background-color: #9575cd;
+    background-color: #33185f;
     height: 80%;
     width: 20%;
     margin-left: 15%;
@@ -17,11 +22,12 @@
 }
 
 .list {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.479);
     height: 70%;
     width: 50%;
     margin-top: 7.5%;
     border-radius: 15px;
+    text-align: center;
 }
 .title {
     font-family: 'Sigmar One', cursive;
@@ -56,4 +62,10 @@
     background-color: #f06292;
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
+}
+.wait {
+    margin-top: 32%;
+    font-family: 'Stint Ultra Condensed', cursive;
+    font-size: 45px;
+    font-weight: 100;
 }

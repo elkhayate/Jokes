@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    height: 10%;
+    justify-content: space-between;
+}
+.cont1 {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.cont2 {
+    width: 70%;
+    margin: auto;
+    text-align: start;
+}
+.img {
+    height: 30px;
+    width: 25px;
+    margin: 15px;
+    cursor: pointer;
+    margin-top: 25px ;
+    border-radius: 50%;
+}
+.imgr {
+    height: 30px;
+    width: 25px;
+    margin: 15px;
+    cursor: pointer;
+    margin-top: 25px ;
+    border-radius: 50%;
+}
+.imgr:hover {
+    background-color: green;
+}
+.count {
+    height: 100%;
+    width: 50px;
+    text-align: center;
+}
+
+.img:hover {
+    background-color: red;
+}
