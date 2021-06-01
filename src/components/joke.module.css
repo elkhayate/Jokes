@@ -31,7 +31,8 @@
     border-radius: 50%;
 }
 .imgr:hover {
-    background-color: green;
+    background-color: red;
+    
 }
 .count {
     height: 100%;
@@ -40,5 +41,5 @@
 }
 
 .img:hover {
-    background-color: red;
+    background-color: green;
 }
